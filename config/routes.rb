@@ -2,10 +2,14 @@ Rails.application.routes.draw do
   resources :punchlines
   resources :names
   resources :ingredients
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  post 'generator/:salty/:sweet/:vegetarian' => 'ingredients#generator', :as => :pizza_generator
+   get 'generator/:salty/:sweet/:vegetarian' => 'ingredients#generator'
   root 'ingredients#welcome'
 
   # Example of regular route:

@@ -3,7 +3,35 @@ class IngredientsController < ApplicationController
 
   # GET /ingredients
   # GET /ingredients.json
-  
+
+
+#added new view
+def generator
+  if params[:salty] == "true"
+    #we are selecting EVERYTHING except sweet
+    @ingredients = Ingredient.where(:sweet => false)
+
+  elsif params[:sweet] == "true"
+    @ingredients = Ingredient.where(:sweet => true)
+
+  elsif params[:vegetarian] == "true"
+    @ingredients = Ingredient.where(:vegetarian => true)
+
+  end
+
+    count = @ingredients.count
+    random = Random.rand(count)
+    @name1 = @ingredients[random].name
+
+    count = @ingredients.count
+    random = Random.rand(count)
+    @name2 = @ingredients[random].name
+
+    count = @ingredients.count
+    random = Random.rand(count)
+    @name3 = @ingredients[random].name
+  end
+
 def welcome
     @ingredients = Ingredient.all
   end
@@ -74,6 +102,6 @@ def welcome
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ingredient_params
-      params.require(:ingredient).permit(:vegetarian, :salty, :sweet)
+      params.require(:ingredient).permit(:vegetarian, :salty, :sweet, :name)
     end
 end

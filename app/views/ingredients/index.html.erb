@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Vegetarian</th>
       <th>Salty</th>
       <th>Sweet</th>
@@ -15,9 +16,26 @@
   <tbody>
     <% @ingredients.each do |ingredient| %>
       <tr>
-        <td><%= ingredient.vegetarian %></td>
-        <td><%= ingredient.salty %></td>
-        <td><%= ingredient.sweet %></td>
+        <td><%= ingredient.name %></td>
+
+        <% if ingredient.vegetarian %>
+          <td>Yes</td>
+          <% else%>
+            <td> </td>
+          <% end %>
+
+        <% if ingredient.salty %>
+          <td>Yes</td>
+          <% else%>
+            <td> </td>
+          <% end %>
+
+        <% if ingredient.sweet %>
+        <td>Yes</td>
+          <% else%>
+            <td> </td>
+          <% end %>
+
         <td><%= link_to 'Show', ingredient %></td>
         <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>
         <td><%= link_to 'Destroy', ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
