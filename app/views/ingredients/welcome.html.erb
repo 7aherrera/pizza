@@ -1,1 +1,36 @@
+
 <h1>welcome</h1>
+=======
+<center>
+
+<img src = "http://i.imgur.com/LvwocrN.png" width="15%" height="15%">
+
+<!--this is an HTML FILE & comment-->
+
+<div class="inner">
+							<header>
+								<h1>Welcome</h1>
+
+							</header>
+
+							
+								
+								<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false) %>
+
+								<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false) %>
+
+								<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true) %>
+										
+
+							
+</div>
+
+</center>
+
+
+
+<!--underneath it this is a ruby code in HTML, also image link to image folder-->
+<%#= image_tag "images/pic01.jpg" %>
+
+
+
