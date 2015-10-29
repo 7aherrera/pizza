@@ -7,6 +7,9 @@ class PunchlinesController < ApplicationController
     @punchlines = Punchline.all
   end
 
+  def generator
+  @punchlines = Punchline.all
+  end 
   # GET /punchlines/1
   # GET /punchlines/1.json
   def show

@@ -6,7 +6,7 @@ class NamesController < ApplicationController
   def index
     @names = Name.all
   end
-
+    
   # GET /names/1
   # GET /names/1.json
   def show

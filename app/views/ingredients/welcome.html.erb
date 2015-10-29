@@ -1,31 +1,22 @@
-
-<h1>welcome</h1>
-=======
 <center>
 
 <img src = "http://i.imgur.com/LvwocrN.png" width="15%" height="15%">
 
 <!--this is an HTML FILE & comment-->
 
-<div class="inner">
+  <div class="inner">
 							<header>
 								<h1>Welcome</h1>
+  							</header>
+ </center>
+								<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false), :class=>"btn-group btn-group-lg", :role=>"group"%>
 
-							</header>
+								<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false), :class=>"btn-group btn-group-lg", :role=>"group"%>
 
-							
-								
-								<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false) %>
+								<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true), :class=>"btn-group btn-group-lg", :role=>"group"%>	
+  </div>
 
-								<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false) %>
 
-								<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true) %>
-										
-
-							
-</div>
-
-</center>
 
 
 
