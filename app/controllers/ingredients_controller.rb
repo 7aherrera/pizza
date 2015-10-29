@@ -11,7 +11,6 @@ def welcome
   def index
     @ingredients = Ingredient.all
   end
-
   # GET /ingredients/1
   # GET /ingredients/1.json
   def show
