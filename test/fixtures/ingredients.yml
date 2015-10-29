@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vegetarian: false
+  salty: false
+  sweet: false
+
+two:
+  vegetarian: false
+  salty: false
+  sweet: false
