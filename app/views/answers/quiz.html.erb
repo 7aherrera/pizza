@@ -3,8 +3,10 @@
   <div class="col-md-4"><% @questions.each_with_index do |question,index| %>
   	<br>
 	<%= question.name %></div>
-  <div class="col-md-4"><% @options[index].each do |option| %>
-      <%= option.name %></div>
+  <div class="col-md-4">
+  	<% @options[index].each do |option| %> <br><%= radio_button_tag "option"+option.number.to_s, option.id%>
+      <%= option.name %>
+  </div>
 <div class="col-md-4"> </div>
 </div>
   
