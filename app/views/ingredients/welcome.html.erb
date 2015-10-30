@@ -4,24 +4,19 @@
 
 <!--this is an HTML FILE & comment-->
 
-<div class="inner">
-							<header>
-								<h1>Welcome</h1>
+<h1>Welcome</h1>
 
-							</header>
 
-							
+<div class="row">
+<table>							
 								
-								<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false) %>
-
-								<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false) %>
-
-								<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true) %>
-										
-
+	<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false) %> 
+								
+	<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false) %> 
 							
+	<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true) %>					
 </div>
-
+</table>
 </center>
 
 
