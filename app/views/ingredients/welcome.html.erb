@@ -4,21 +4,18 @@
 
 <!--this is an HTML FILE & comment-->
 
-<h1>Welcome</h1>
 
+  <div class="inner">
+							<header>
+								<h1>Welcome</h1>
+  							</header>
+ </center>
+								<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false), :class=>"btn-group btn-group-lg", :role=>"group"%>
 
-<div class="row">
-<table>							
-								
-	<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false) %> 
-								
-	<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false) %> 
-							
-	<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true) %>					
-</div>
-</table>
-</center>
+								<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false), :class=>"btn-group btn-group-lg", :role=>"group"%>
 
+								<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true), :class=>"btn-group btn-group-lg", :role=>"group"%>	
+  </div>
 
 
 <!--underneath it this is a ruby code in HTML, also image link to image folder-->

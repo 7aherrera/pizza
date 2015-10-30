@@ -19,9 +19,10 @@ def generator
 
   end
 
-    count = @ingredients.count
+count = @ingredients.count 
+if count > 0 
     random = Random.rand(count)
-    @name1 = @ingredients[random].name
+    @name1 = @ingredients [random].name    
 
     count = @ingredients.count
     random = Random.rand(count)
@@ -30,7 +31,24 @@ def generator
     count = @ingredients.count
     random = Random.rand(count)
     @name3 = @ingredients[random].name
+    
+   @names = Name.all 
+    count = @names.count 
+    random = Random.rand(@names.count)
+    @name = @names[random].name 
+
+    @punchlines = Punchline.all
+    count = @punchlines.count
+    random = Random.rand(@punchlines.count)
+    @punchline = @punchlines[random].name
+
+  else 
+    @name1 = "No"
+    @name2 ="Ingredients"
+    @name3 = "Avaliable"
   end
+
+end
 
 def welcome
     @ingredients = Ingredient.all
@@ -105,3 +123,4 @@ def welcome
       params.require(:ingredient).permit(:vegetarian, :salty, :sweet, :name)
     end
 end
+
