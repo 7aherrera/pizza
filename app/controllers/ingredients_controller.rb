@@ -50,6 +50,7 @@ if count > 0
 
 end
 
+
 def welcome
     @ingredients = Ingredient.all
   end

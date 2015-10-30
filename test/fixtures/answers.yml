@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  piiza_id_id: 1
+
+two:
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  piiza_id_id: 1

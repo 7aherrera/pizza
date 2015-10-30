@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :answers
+  resources :piiza_ids
+  resources :options
+  resources :questions
   resources :punchlines
   resources :names
   resources :ingredients
@@ -11,6 +15,8 @@ Rails.application.routes.draw do
   post 'generator/:salty/:sweet/:vegetarian' => 'ingredients#generator', :as => :pizza_generator
    get 'generator/:salty/:sweet/:vegetarian' => 'ingredients#generator'
   root 'ingredients#welcome'
+   get 'quiz' => 'answers#quiz' 
+  root 'answers#'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

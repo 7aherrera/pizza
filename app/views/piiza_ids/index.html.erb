@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Piiza Ids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @piiza_ids.each do |piiza_id| %>
+      <tr>
+        <td><%= piiza_id.name %></td>
+        <td><%= piiza_id.number %></td>
+        <td><%= link_to 'Show', piiza_id %></td>
+        <td><%= link_to 'Edit', edit_piiza_id_path(piiza_id) %></td>
+        <td><%= link_to 'Destroy', piiza_id, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Piiza', new_piiza_id_path %>

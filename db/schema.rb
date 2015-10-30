@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029130005) do
+ActiveRecord::Schema.define(version: 20151030150858) do
+
+  create_table "answers", force: :cascade do |t|
+    t.string   "option1"
+    t.string   "option2"
+    t.string   "option3"
+    t.integer  "piiza_id_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "ingredients", force: :cascade do |t|
     t.boolean  "vegetarian"
@@ -28,8 +37,28 @@ ActiveRecord::Schema.define(version: 20151029130005) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "options", force: :cascade do |t|
+    t.text     "name"
+    t.integer  "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "piiza_ids", force: :cascade do |t|
+    t.text     "name"
+    t.integer  "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "punchlines", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
