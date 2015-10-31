@@ -69,6 +69,6 @@ class PiizaIdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def piiza_id_params
-      params.require(:piiza_id).permit(:name, :number)
+      params.require(:piiza_id).permit(:name, :number, :description)
     end
 end

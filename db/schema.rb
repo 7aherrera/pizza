@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030150858) do
+ActiveRecord::Schema.define(version: 20151031185341) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "option1"
@@ -47,8 +47,9 @@ ActiveRecord::Schema.define(version: 20151030150858) do
   create_table "piiza_ids", force: :cascade do |t|
     t.text     "name"
     t.integer  "number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
   end
 
   create_table "punchlines", force: :cascade do |t|

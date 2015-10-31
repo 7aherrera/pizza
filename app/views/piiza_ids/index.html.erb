@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Description</th>
       <th>Number</th>
       <th colspan="3"></th>
     </tr>
@@ -15,6 +16,7 @@
     <% @piiza_ids.each do |piiza_id| %>
       <tr>
         <td><%= piiza_id.name %></td>
+        <td><%= piiza_id.description %></td>
         <td><%= piiza_id.number %></td>
         <td><%= link_to 'Show', piiza_id %></td>
         <td><%= link_to 'Edit', edit_piiza_id_path(piiza_id) %></td>

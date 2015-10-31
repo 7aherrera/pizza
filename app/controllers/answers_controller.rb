@@ -27,6 +27,7 @@ def personality
   @piiza_id = @answer.piiza_id_id
   @pizza = PiizaId.where(:id => @piiza_id).first
   @name = @pizza.name
+  @description = @pizza.description
   else
   @name = "have a salad"
   end 
