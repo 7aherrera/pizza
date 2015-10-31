@@ -16,8 +16,7 @@ Rails.application.routes.draw do
    get 'generator/:salty/:sweet/:vegetarian' => 'ingredients#generator'
   root 'ingredients#welcome'
    get 'quiz' => 'answers#quiz' 
-  #root 'answers#'
-    #get'answers' => ''
+    get 'personality' => 'answers#personality'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

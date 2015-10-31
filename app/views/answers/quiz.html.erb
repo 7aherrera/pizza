@@ -1,10 +1,11 @@
 <center>
+	<%= form_tag("/personality", method:"get") do %>
 	<div class="row">
   <div class="col-md-4"><% @questions.each_with_index do |question,index| %>
   	<br>
 	<%= question.name %></div>
   <div class="col-md-4">
-  	<% @options[index].each do |option| %> <br><%= radio_button_tag "option"+option.number.to_s, option.id%>
+  	<% @options[index].each do |option| %><%= radio_button_tag "option"+option.number.to_s, option.id%>
       <%= option.name %>
   </div>
 <div class="col-md-4"> </div>
@@ -12,6 +13,9 @@
   
   <%end%>
 <% end%>
+<br>
+<br>
+	<%= submit_tag("Submit") %>
+<%end%>
 
 </center>
-

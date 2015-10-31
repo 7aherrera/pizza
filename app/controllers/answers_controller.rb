@@ -12,7 +12,7 @@ class AnswersController < ApplicationController
   def show
   end
 
-def quiz
+def quiz 
   @options = []
   @questions = Question.all
   @questions.each do |question| 
@@ -21,7 +21,18 @@ def quiz
   end
 end
 
+def personality 
+  @answer = Answer.where(:option1=>params[:option1], :option2=> params[:option2], :option3=>params[:option3]).first
+  if !@answer.nil? 
+  @piiza_id = @answer.piiza_id_id
+  @pizza = PiizaId.where(:id => @piiza_id).first
+  @name = @pizza.name
+  else
+  @name = "have a salad"
+  end 
+end
   # GET /answers/new
+ 
   def new
     @answer = Answer.new
   end
