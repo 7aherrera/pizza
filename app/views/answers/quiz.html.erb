@@ -1,0 +1,33 @@
+<center>
+
+  <body id="background1">
+
+
+
+<%= form_tag("/personality", method:"get") do %>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+
+
+
+
+    <% @questions.each_with_index do |question,index| %>
+
+<br>
+	  <h1 class="header2" style="padding: 70px 10px 10px 10px"><%= question.name %></h1>
+ 
+<br>
+
+  	<% @options[index].each do |option| %><%= radio_button_tag "option"+option.number.to_s, option.id,  {:class => "body", :style => "color: red"}%>
+      <%= option.name %>
+
+
+<%end%>
+<% end%>
+<br>
+<br>
+<input class="btn btn-default" type="submit" value="Submit"></input>
+<%end%>
+
+
+</center>
+</body>

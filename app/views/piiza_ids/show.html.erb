@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @piiza_id.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @piiza_id.number %>
+</p>
+
+<%= link_to 'Edit', edit_piiza_id_path(@piiza_id) %> |
+<%= link_to 'Back', piiza_ids_path %>

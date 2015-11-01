@@ -14,6 +14,18 @@
 	background-image: url("http://troppa-nl.com/wp-content/uploads/2015/08/pizza-stock.jpg");
 	background-size: 100%;
     background-repeat: no-repeat;
+     
+  filter: alpha(opacity=80);
+  /* IE */
+  -moz-opacity: 0.6;
+  /* Mozilla */
+  opacity: 1;
+  /* CSS3 */
+  position: center;
+  top: 10;
+  left: 10;
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -28,6 +40,19 @@
 	text-shadow: -1px 0 #707070, 0 1px #707070, 1px 0 #707070, 0 -1px #707070;
 
 }
+
+.header2 {
+	font-family: Raleway;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	height: 70px;
+	color: white;
+	text-shadow: -1px 0 #707070, 0 1px #707070, 1px 0 #707070, 0 -1px #707070;
+
+}
+
 
 .h2 {
 	font-family: Raleway;
@@ -66,14 +91,14 @@
 
 #container {
   position: center;
-  width: 500px;
+  width: 1000px;
   height: 80px;
 }
 
 
 #container1 {
   position: center;
-  width: 900px;
+  width: 1000px;
   height: 200px;
 }
 
@@ -107,3 +132,23 @@
   width: 100%;
 }
 
+#container3 {
+  position: center;
+  width: 1000px;
+  height: 1000px;
+}
+
+#block3 {
+  background: #CCC;
+  filter: alpha(opacity=10);
+  /* IE */
+  -moz-opacity: 0.6;
+  /* Mozilla */
+  opacity: 0.6;
+  /* CSS3 */
+  position: center;
+  top: 10;
+  left: 10;
+  height: 100%;
+  width: 100%;
+}

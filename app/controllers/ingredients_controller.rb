@@ -58,6 +58,7 @@ end
 
 end
 
+
 def welcome
     @ingredients = Ingredient.all
   end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Option1:</strong>
+  <%= @answer.option1 %>
+</p>
+
+<p>
+  <strong>Option2:</strong>
+  <%= @answer.option2 %>
+</p>
+
+<p>
+  <strong>Option3:</strong>
+  <%= @answer.option3 %>
+</p>
+
+<p>
+  <strong>Piiza id:</strong>
+  <%= @answer.piiza_id_id %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

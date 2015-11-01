@@ -1,0 +1,31 @@
+<%= form_for(@piiza_id) do |f| %>
+  <% if @piiza_id.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@piiza_id.errors.count, "error") %> prohibited this piiza_id from being saved:</h2>
+
+      <ul>
+      <% @piiza_id.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+
+<div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
