@@ -77,6 +77,17 @@
 	color: black;
 }
 
+.bodyquiz {
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 25.8px;
+  color: black;
+  text-align: justify;
+}
+
 #container {
   position: center;
   width: 1000px;
@@ -87,6 +98,12 @@
 #container1 {
   position: center;
   width: 1000px;
+  height: 200px;
+}
+
+#containerquiz {
+  position: center;
+  width: 500px;
   height: 200px;
 }
 
@@ -126,7 +143,7 @@
   height: 1000px;
 }
 
-#block3 {
+#blockquiz {
   background: #CCC;
   filter: alpha(opacity=10);
 
@@ -137,6 +154,6 @@
   position: center;
   top: 10;
   left: 10;
-  height: 100%;
+  height: 200%;
   width: 100%;
 }
