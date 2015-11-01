@@ -15,5 +15,11 @@
   <%= @ingredient.sweet %>
 </p>
 
+<!--this is code for an added gem on uploading images-->
+
+<%= image_tag @ingredient.avatar.url %>
+<%= image_tag @ingredient.avatar.url(:medium) %>
+<%= image_tag @ingredient.avatar.url(:thumb) %>
+
 <%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
 <%= link_to 'Back', ingredients_path %>

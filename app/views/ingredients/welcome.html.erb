@@ -1,23 +1,70 @@
+<body id="background">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+
 <center>
 
-<img src = "http://i.imgur.com/LvwocrN.png" width="15%" height="15%">
+<center>
+	<h1 class="header" style="padding: 70px 10px 10px 10px">Random Pizza Generator</h1>
+
+
+<br>
+<br>
+<br>
+<br>
+	    <div id="block">
+		<div id="container">
+		<p class="body">
+			Choose your pizza style!
+	    </p>
+        </div>
+        </div>
+
+<br>
+<br>
+
+
+<div class="row">
+	<table>
+
+		<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false), :class => "btn btn-default btn-lg", :role=>"group"%>
+
+			<div class="divider">
+				<br>
+				<br>
+
+		<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false), :class=>"btn btn-default btn-lg", :role=>"group"%>
+
+			<div class="divider">
+				<br>
+				<br>
+
+		<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true), :class=>"btn btn-default btn-lg", :role=>"group"%>
+
+	
+ 	</table>
+
+
+ </div>
+
+ <br>
+<br>
+<br>
+<br>
+	    <div id="block">
+		<div id="container">
+		<p class="body">
+			Take our pizza personality test!
+	    </p>
+        </div>
+        </div>
+
+
+</body>
+
+
 
 <!--this is an HTML FILE & comment-->
-
-
-  <div class="inner">
-							<header>
-								<h1>Welcome</h1>
-  							</header>
- </center>
-								<%= button_to "Vegetarian", pizza_generator_path(:vegetarian => :true, :salty =>:false, :sweet => :false), :class=>"btn-group btn-group-lg", :role=>"group"%>
-
-								<%= button_to "Salty", pizza_generator_path(:vegetarian => :true, :salty =>:true, :sweet => :false), :class=>"btn-group btn-group-lg", :role=>"group"%>
-
-								<%= button_to "Sweet", pizza_generator_path(:vegetarian => :false, :salty =>:false, :sweet => :true), :class=>"btn-group btn-group-lg", :role=>"group"%>	
-  </div>
-
-
 <!--underneath it this is a ruby code in HTML, also image link to image folder-->
 <%#= image_tag "images/pic01.jpg" %>
 

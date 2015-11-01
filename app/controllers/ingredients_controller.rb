@@ -34,13 +34,21 @@ if count > 0
     
    @names = Name.all 
     count = @names.count 
+    if count > 0
     random = Random.rand(@names.count)
     @name = @names[random].name 
+  else
+    @name = "No cool name available"
+end
 
-    @punchlines = Punchline.all
-    count = @punchlines.count
+  @punchlines = Punchline.all
+  count = @punchlines.count
+     if count > 0
     random = Random.rand(@punchlines.count)
     @punchline = @punchlines[random].name
+  else
+    @name = "No punchline here"
+end
 
   else 
     @name1 = "No"
@@ -121,7 +129,7 @@ def welcome
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ingredient_params
-      params.require(:ingredient).permit(:vegetarian, :salty, :sweet, :name)
+      params.require(:ingredient).permit(:vegetarian, :salty, :sweet, :name, :avatar)
     end
 end
 

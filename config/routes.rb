@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :answers
   resources :piiza_ids
   resources :options
