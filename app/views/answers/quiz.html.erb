@@ -14,12 +14,12 @@
  
 <br>
 
-  	<% @options[index].each do |option| %><%= radio_button_tag "option"+option.number.to_s, option.id,  {:class => "body", :style => "color: red"}%>
+  	<% @options[index].each do |option| %><%= radio_button_tag "option"+(index+1).to_s, option.id,  {:class => "body", :style => "color: red"}%>
       <%= option.name %>
 
 
 <%end%>
-<% end%>
+<% end%>    
 <br>
 <br>
 <input class="btn btn-default" type="submit" value="Submit"></input>

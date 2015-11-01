@@ -4,9 +4,13 @@ source 'https://rubygems.org'
 #required TZinfo gem for runing server
 gem 'tzinfo-data', '~> 1.2015', '>= 1.2015.7'
 #gem file for images
+<<<<<<< HEAD
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk'
 
+=======
+gem 'devise'
+>>>>>>> 286dbfadc8f95fb815e810208271e4a1c4603de0
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
